@@ -9,7 +9,8 @@
                 "sourceComments": false,
                 "outputStyle": "compressed",
                 "sourceMap": false
-            }
+            },
+            "linting.collapsed": true
         }
     }
 }

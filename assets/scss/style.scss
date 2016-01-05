@@ -5,4 +5,98 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #3b4a61;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+#wrapper {
+    min-height: 100%;
+}
+
+aside {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 510px;
+    min-height: 100%;
+    box-shadow: 0px 1px 29px 0.00px rgba(0, 0, 0, 0.36);
+    background: #eee;
+    color: #526786;
+}
+
+aside h3 {
+    margin: 0 30px;
+}
+
+aside p {
+    line-height: 1.4em;
+    margin: 10px 30px;
+}
+
+#content {
+    display: block;
+    position: relative;
+    top: 120px;
+    left: 600px;
+    width: 600px;
+    color: azure;
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+
+#content h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+a:link, a:visited, a:active {
+    color: azure;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.6em;
+    width: 550px;
+    margin: 15px auto;
+    padding: 10px;
+    border: 1px solid azure;
+    border-radius: 10px;
+    clear: both;
+    background-color: rgb(49, 65, 88);
+    color: azure;
+}
+
+input:focus {
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.30);
+}
+
+button {
+    background-color: rgb(49, 65, 88);
+    color: azure;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;  
+}
+
+#result {
+    width: 550px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background: #526786;
+    color: azure;
+}
+
+#explanation {
+    font-size: 0.8em;
 }

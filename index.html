@@ -6,12 +6,54 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
     
     <!-- Scripts -->
-    <script src="assets/js/app.js"></script>
     <script src="node_modules/jshashes/hashes.js"></script>
+    <script src="assets/js/app.js"></script>
+    
 </head>
 <body>
+    <div id="wrapper">
+       <aside id="help">
+        <div id="logo">
+            <img src="assets/images/logo.png" alt="">
+        </div>
+        
+        <h3>How do I use PassCrypto?</h3>
+        <p>It's easy. You only have to remember one simple phrase, and it doesn't have to have numbers, special characters or anything else. It could be the name of your cat.</p>
+        <p>Simply fill in your phrase in the top field. Then, enter the website you're signing in to in the second field, e.g. <strong>facebook.com</strong>, <strong>google.com</strong> or <strong>reddit.com</strong>.</p>
+        <p><strong>Please note:</strong> the second field has to be filled in the same way every time! Your unique password is generated based on the two fields. I recommend typing the URL in as shown above, without the 'www.' part and in lowercase.</p>
+        
+    </aside>
     
+    <div id="content">
+        <div class="intro">
+            <h1>Safely remember your passwords.</h1>
+            <p>People say you shouldn't use the same password for all your accounts, and they're right. But remembering different passwords for all your accounts can be a hassle.</p>
+            <p>PassCrypto allows you to easily figure out what your passwords are. Just remember a simple single key phrase, and the account you're trying to sign in to, and PassCrypto does all the hard work.</p>
+            <p>Want to know how this works? <a href="#explanation">Click here</a> for an explanation.</p>
+        </div>
+        <div id="form">
+            <form id="passcrypt">
+                <input id="password" type="password" placeholder="Your simple phrase">
+                <input id="salt" type="text" placeholder="website you're signing in to">
+                <button id="generate">Generate password</button>
+            </form>
+        </div>
+        <div id="result">
+            <span id="result-field">Your password will appear here...</span>
+        </div>
+        
+        <div id="explanation">
+            
+            <h3>How does this work?</h3>
+            <p>This script uses a technique called hashing. An input is jumbled up through a one-way algorith, in this case SHA512, which cannot easily be reverse-engineered but will always return the same result. If you add a parameter to this hashing algorithm called a salt, this result will be completely, randomly different. I've used an easy to remember phrase as the original input, and the domain you're trying to log into as the salt. That way, your passwords for different accounts are completely different from one another, yet easily retrievable through this script.</p>
+            <p>Check out the source code on GitHub <a href="https://github.com/WouterSpaak/PassCrypto">here</a>, or read some more about hashing on <a href="https://en.wikipedia.org/wiki/Hash_function">Wikipedia</a> here.</p>
+            
+        </div>
+    
+    </div>
+    </div>
 </body>
 </html>
